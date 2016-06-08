@@ -11,6 +11,8 @@ The purpose of the library is to provide easy way for getting your car tracks
 data and present them in usable format for further analyzing / building 
 applications around it.
 
+The library uses [this fastest available & lightweight implementation](https://github.com/paulnsorensen/fast_haversine) of calculating distance between two points by [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula).
+
 The library is for personal use only and, of course, it doesn't send your data
 anywhere so you can be confident using it.
 
