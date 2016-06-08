@@ -2,6 +2,7 @@
 
 [![Dependency Status](https://gemnasium.com/badges/github.com/sharipov-ru/starline.svg)](https://gemnasium.com/github.com/sharipov-ru/starline)
 [![Code Climate](https://codeclimate.com/github/sharipov-ru/starline/badges/gpa.svg)](https://codeclimate.com/github/sharipov-ru/starline)
+[![Build Status](https://travis-ci.org/sharipov-ru/starline.svg?branch=master)](https://travis-ci.org/sharipov-ru/starline)
 
 StarlineTelematics is a ruby library-wrapper over telematics JSON data from
 satellite security and monitoring service which is used in StarLine car alarm
