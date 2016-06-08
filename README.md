@@ -31,19 +31,27 @@ Or install it yourself as:
 
 Read JSON files:
 
-    telematics = StarLine::Telematics.new(track_file_path)    
+```ruby
+telematics = StarLine::Telematics.new(track_file_path)    
+```
 
 Get GeoPoint objects:
 
-    telematics.geo_points
+```ruby
+telematics.geo_points
+```
 
 Get all tracks - connections between geo points:
 
-    telematics.tracks
+```ruby
+telematics.tracks
+```
 
 Filter out tracks when with zero distance:
 
-    telematics.tracks.without_parking_tracks
+```ruby
+telematics.tracks.without_parking_tracks
+```
 
 ## Development
 
