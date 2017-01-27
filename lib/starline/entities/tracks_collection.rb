@@ -1,3 +1,5 @@
+require 'starline/entities/distance_filter'
+
 module Starline
   module Entities
     class TracksCollection
@@ -15,8 +17,9 @@ module Starline
         @tracks.size
       end
 
-      def without_parking_tracks
-        @tracks.reject { |track| track.distance == 0 }
+      def filter_by_distance(search_params_hash)
+        filter = DistanceFilter.new(search_params_hash)
+        filter.apply_to(@tracks)
       end
     end
   end

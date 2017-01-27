@@ -57,7 +57,7 @@ describe Starline::Telematics do
     telematics = described_class.new(tracks_path)
 
     tracks = telematics.tracks
-    filtered_tracks = tracks.without_parking_tracks
+    filtered_tracks = tracks.filter_by_distance(ne: 0)
     expect(filtered_tracks.size).to eq(4)
     expect(filtered_tracks).to all(be_kind_of(Starline::Entities::Track))
   end

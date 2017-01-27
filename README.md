@@ -53,10 +53,10 @@ Get all tracks - connections between geo points:
 telematics.tracks
 ```
 
-Filter out tracks when with zero distance:
+Filter tracks with zero distance:
 
 ```ruby
-telematics.tracks.without_parking_tracks
+telematics.tracks.filter_by_distance(eq: 0)
 ```
 
 ## Development
