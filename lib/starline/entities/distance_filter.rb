@@ -24,6 +24,7 @@ module Starline
       #
       # Supports only one filter as search parameterfor now.
       def initialize(search_params_hash)
+        raise_invalid_argument_type_error unless search_params_hash.is_a?(Hash)
         raise_unknown_filter_error if search_params_hash.empty?
         raise_ambiguous_filter_error if search_params_hash.size > 1
 
@@ -56,6 +57,11 @@ module Starline
 
       def operator
         OPERATORS[type]
+      end
+
+      def raise_invalid_argument_type_error
+        raise ArgumentError,
+          "Invalid argument type. Search filter must be a Hash"
       end
 
       def raise_unknown_filter_error

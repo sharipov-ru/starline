@@ -11,6 +11,15 @@ describe Starline::Entities::DistanceFilter do
     expect(filter.value).to eq(5.6)
   end
 
+  it "raises an error when wrong argument type was passed to initializer" do
+    expect {
+      described_class.new("wrong-argument")
+    }.to raise_error(
+      ArgumentError,
+      "Invalid argument type. Search filter must be a Hash"
+    )
+  end
+
   it "raises an error when there are multiple filters in search query" do
     expect {
       described_class.new(lt: 120, gte: 2.2)
